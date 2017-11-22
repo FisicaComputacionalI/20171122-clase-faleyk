@@ -1,0 +1,12 @@
+#include <iostream>
+#include<math.h>
+#define PI 3.14159265
+
+using namespace std;
+int main(){
+ float x,y;
+ x=.15;
+ y=cos(x * PI / 180.0 );
+ cout<<"Coseno de "<<x<<" es "<<y<<endl;
+ return 0;
+}
