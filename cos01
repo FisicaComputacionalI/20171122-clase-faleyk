@@ -1,0 +1,48 @@
+//  main.cpp
+//  coseno
+//
+//  Created by faleyk on 11/22/17.
+//  Copyright © 2017 faleyk. All rights reserved.
+//
+
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+int main(){
+    double x,y;
+    x=.15;
+    y=cos(x);
+    cout<<"Coseno de "<<x<<" es "<<y<<endl;
+    
+    for (int i=1;i<=10;i++){
+        double f,g,h,z;
+        h=i/1000000000000000.; //cuando agrego otro cero, al compilar no muestra ya el valor de h
+        f=cos(x+(2*h));
+        g=cos(x+h);
+        z=f-g;
+        if(z!=0)
+            cout<<"h="<<h<<endl;
+        cout<<"f(x+2h)="<<f<<endl;
+        cout<<"f(x+h)="<<g<<endl;
+        cout<<"f(x+2h)-f(x+h)="<<z<<endl;
+        break;
+    }
+    
+// double ep=1e-7, s=0.01;
+// double  w1=(cos(x+s)-cos(x))/s;
+//    do {
+//    s=s/2;
+//        double  w2=((cos(x+s)-cos(x)))/s;
+//       double  dif=abs(w2-w1);
+//        w1=w2;
+ //       if (dif<ep){
+ //           cout<<endl<<"Por definición ="<<w2<<endl;
+//            break;}
+//   }while(s<1e-6);
+    
+    double a=sin(x);
+    cout<<endl<<"Sen(x)="<<a<<endl;
+
+    return 0;
+}
